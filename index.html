@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular HTTP</title>
+
+    <script src="angular.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body ng-app="app">
+<div ng-controller="mainCtrl">
+    <h1>Hello World!</h1>
+    {{testValue}}
+    <h3>List of Users</h3>
+    {{users[0].name}}
+    <ol>
+        <li ng-repeat="user in users">
+            {{user.name}} <a href="" ng-click="deleteUser(user.id)">Delete</a>
+        </li>
+    </ol>
+    <h3>Add New User</h3>
+    <p>Enter name
+        <input ng-model="user.name"/>
+        <button ng-click="addUser()">Add User</button>
+    </p>
+</div>
+</body>
+</html>
